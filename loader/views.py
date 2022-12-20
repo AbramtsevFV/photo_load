@@ -17,5 +17,6 @@ class HomePage(View):
         if form.is_valid():
             form.save()
             img_obj = form.instance
-            result = 'На фото пиоза собаки'
+            # Результат обработки
+            result = 'На фото поза собаки'
             return render(request, self.template_name, {'form': form, 'img_obj': img_obj, 'result': result})
