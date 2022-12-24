@@ -1,8 +1,10 @@
 from django import forms
 from .models import Photo
-
+from django.forms import FileInput
 
 class ImageForm(forms.ModelForm):
     class Meta:
         model = Photo
-        fields = '__all__'
+        fields = ['image', ]
+        # widgets = {'image': FileInput(attrs={'class': 'btn btn-secondary'})
+        # }
