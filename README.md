@@ -1,4 +1,4 @@
 ### Запуск Docker ###
 - Выполняем команду: 
 ```
-  docker-compose up -d
+  docker-compose up
