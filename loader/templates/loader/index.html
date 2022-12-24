@@ -15,18 +15,18 @@
                 <div class="main-text">
                   <h1>Rama Yoga</h1>
                   <p>Rama Yoga сможет распознать одну из поз на фото: Воин или Собака. Пожалуйста, загрузите ваше фото. На фото должны быть видны все конечности тела, камера не должна быть отдалена более чем на 2,5 метра.</p>
-{#                  <p class="text-center"><a class="btn btn-secondary" href="upload.html">Загрузить фото</a></p>#}
 
                     <form method="post" enctype="multipart/form-data" action="{% url 'upload' %}">
-                  {% csrf_token %}
-                        <span class="btn btn-secondary"> </span>
-                        <p class="text-center"> {{ form.image }} </p>
+                        {% csrf_token %}
+                    {{ form.image }}
+                        <p class="text-center"> <button type="button"  id="file_l" class="btn btn-secondary" onclick="document.getElementById('id_image').click();">Загрузить фото</button></p>
 
-                  <p class="text-center"> <button type="submit"  class="btn btn-secondary">Загрузить</button></p>
                     </form>
                 </div>
             </div>
         </div>
+
+
     </div>
 </body>
 
